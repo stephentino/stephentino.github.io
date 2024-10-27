@@ -44,6 +44,17 @@ nav ul li a {
     width: 100%; /* Adjusted width for a wider container */
 }
 
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%; /* Reduced padding for better layout */
+    padding-left: 20%;
+    padding-right: 70%;
+    box-sizing: border-box;
+    width: 130%; /* Adjusted width for a wider container */
+}
+
 .container img {
     max-width: 40%; /* Reduce the image width */
     margin-right: 10%;
@@ -103,6 +114,48 @@ section2 {
 
 .button:hover {
     background-color: #555;
+}
+
+/* ADDED OCT 17 */
+.toggle {
+    display: inline; /* Ensure the button takes up full width */
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.arrow {
+    display: inline-block; /* Arrow is inline with the text inside the button */
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+p2 {
+    margin-bottom: 0%; /* Removes space between the paragraph and the button */
+    font-size: larger;
+}
+
+p22 {
+    margin-bottom: 0%; /* Removes space between the paragraph and the button */
+    font-size: x-large;
+}
+
+p3 {
+    margin-bottom: 0%; 
+    font-size: large;
+}
+
+.text {
+    display: none; /* Initially hidden */
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 4%;
+}
+
+.visible {
+    display: block; /* Revealed state */
 }
 
 /* Responsive Design */
