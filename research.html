@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Stephen Tino</title>
+    <title>Stephen Tino</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
+
         <div class="hero">
             <h1>Stephen Tino</h1>
         </div>
+        
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,51 +22,62 @@
                 <li><a href="https://github.com/stephentino" target="_blank">GitHub</a></li>
             </ul>
         </nav>
+
     </header>
 
-    <div class="no-sidebar">
-        <h2>Working Papers</h2>
+    <div class="container">
 
-        <div class="paper-item">
-            <p class="paper-title">The Labor Market Return to Permanent Residency</p>
-            <p class="authors">with Kory Kroft, Isaac Norwich, and Matthew J. Notowidigdo</p>
-            <div class="link-stack">
-                <a href="https://stephentino.github.io/KNNT_TFWs_dec2025.pdf" target="_blank" class="btn">Latest version</a>
-                <a href="https://www.nber.org/papers/w34630" target="_blank" class="btn">NBER Working Paper 34630</a>
-                <a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/12/CLEF-093-2025.pdf" target="_blank" class="btn">CLEF Working Paper 93</a>
-            </div>
+        <img src="headshot.JPG" alt="" class="img">
+
+        <div class="tex">
+            <h2>Working Papers</h2>
+
+  <p> The Labor Market Return to Permanent Residency<br><i>with Kory Kroft, Isaac Norwich, and Matthew J. Notowidigdo</i><br> [<a href="https://stephentino.github.io/KNNT_TFWs_dec2025.pdf" target="_blank">Latest version</a>] [<a href="https://www.nber.org/papers/w34630" target="_blank">NBER Working Paper 34630</a>] [<a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/12/CLEF-093-2025.pdf" target="_blank">CLEF Working Paper 93</a>] </p>  
+
+            
+
+            
+            <p>  Labor Market Power, Firm Productivity, and the Immigrant-Native Pay Gap <br>[<a href="https://stephentino.github.io/tino_jmp.pdf" target="_blank">Latest version</a>] [<a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/09/CLEF-088-2025.pdf" target="_blank">CLEF Working Paper 88</a>] </p> 
+
+            
+               
+            <p> Immigrant Impact on Local Labour Markets: Evidence from the Canadian International Student Expansion<br><i>with David A. Green and Mikal Skuterud</i><br> [Email for latest version] <!-- [<a href="https://stephentino.github.io/international_students_gst.pdf" target="_blank">Full text</a>] </p> -->
+
+            
+          
+            <p> Labor Market Concentration, Minimum Wages, and Local Property Crime Rates <br> [<a href="https://stephentino.github.io/tino_mw.pdf" target="_blank">Latest version</a>]</p> 
+
+            
+          <p> <br> </p>
+            
+            <h2>Work in Progress </h2>
+
+            <p> The Impact of Source Country Institutions on Immigrant Integration <br><i>with Wifag Adnan and Cevat Aksoy</i><br> </p>
+            <!-- <p> Immigration and Outside Options <br><i>with David Green, Kory Kroft, and Kevin Lim</i></p> -->
+
+            
         </div>
-
-        <div class="paper-item">
-            <p class="paper-title">Labor Market Power, Firm Productivity, and the Immigrant-Native Pay Gap</p>
-            <div class="link-stack">
-                <a href="https://stephentino.github.io/tino_jmp.pdf" target="_blank" class="btn">Latest version</a>
-                <a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/09/CLEF-088-2025.pdf" target="_blank" class="btn">CLEF Working Paper 88</a>
-            </div>
-        </div>
-
-        <div class="paper-item">
-            <p class="paper-title">Immigrant Impact on Local Labour Markets: Evidence from the Canadian International Student Expansion</p>
-            <p class="authors">with David A. Green and Mikal Skuterud</p>
-            <div class="link-stack">
-                <span class="btn-disabled">Email for latest version</span>
-            </div>
-        </div>
-
-        <div class="paper-item">
-            <p class="paper-title">Labor Market Concentration, Minimum Wages, and Local Property Crime Rates</p>
-            <div class="link-stack">
-                <a href="https://stephentino.github.io/tino_mw.pdf" target="_blank" class="btn">Latest version</a>
-            </div>
-        </div>
-
-        <h2>Work in Progress</h2>
-
-        <div class="paper-item">
-            <p class="paper-title">The Impact of Source Country Institutions on Immigrant Integration</p>
-            <p class="authors">with Wifag Adnan and Cevat Aksoy</p>
-        </div>
+        
     </div>
+    
+        <script>
+            function toggleText(textID, arrowID) {
+                var textElement = document.getElementById(textID);
+                var arrow = document.getElementById(arrowID);
+    
+                // Toggle the visibility of the text
+                if (textElement.style.display === "none" || textElement.style.display === "") {
+                    textElement.style.display = "block"; // Show the text
+                    arrow.innerHTML = "▼";  // Change arrow to point down
+                } else {
+                    textElement.style.display = "none"; // Hide the text
+                    arrow.innerHTML = "►";  // Change arrow to point right
+                }
+            }
+        </script>
+
+
+    </section>
 
 </body>
 </html>
