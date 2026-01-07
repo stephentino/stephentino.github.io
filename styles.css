@@ -1,4 +1,4 @@
-/* GLOBAL STYLES */
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,133 +6,178 @@ body {
     box-sizing: border-box;
     background-color: white;
     color: #333;
-    line-height: 1.6;
 }
 
 header {
     background-color: #f4f4f4;
-    padding: 20px 0;
+    color: #333;
+    padding: 5px 10px;
     text-align: center;
 }
 
-.hero h1 { margin: 0; font-size: 2.5rem; }
-
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
-    margin-top: 15px;
     display: flex;
     justify-content: center;
 }
 
-nav ul li { margin: 0 15px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+nav ul li {
+    margin: 0 15px;
+}
 
-/* LAYOUT CONTAINER */
-/* This handles the side-by-side on Index */
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .container {
     display: flex;
-    align-items: flex-start; /* Aligns text to top */
+    align-items: center;
     justify-content: center;
-    padding: 40px 10%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px; /* Space between headshot and text */
+    padding-top: 3%; /* Reduced padding for better layout */
+    padding-left: 22%;
+    padding-right: 22%;
+    box-sizing: border-box;
+    width: 100%; /* Adjusted width for a wider container */
 }
 
-/* Headshot Styling */
-.headshot-container img {
-    width: 250px; /* Fixed width for headshot */
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%; /* Reduced padding for better layout */
+    padding-left: 20%;
+    padding-right: 70%;
+    box-sizing: border-box;
+    width: 130%; /* Adjusted width for a wider container */
+}
+
+.container img {
+    max-width: 40%; /* Reduce the image width */
+    margin-right: 10%;
     height: auto;
     border-radius: 8px;
-    display: block;
 }
 
-/* Research Text Area */
-.content-area {
-    flex: 1; /* Takes up remaining space */
-    max-width: 800px;
+.container tex {
+    max-width: 60%; /* Optional: control the maximum width of the text */
 }
 
-/* RESEARCH PAGE SPECIFIC (No Headshot) */
-/* This centers the text when there is no sidebar */
-.no-sidebar {
-    margin: 0 auto;
-    padding: 40px 20px;
-    max-width: 800px;
-}
-
-/* PAPER ITEM STYLING */
-.paper-item {
-    margin-bottom: 40px; /* Big space between papers */
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee; /* Divider line */
-}
-
-/* Remove border from last item */
-.paper-item:last-child { border-bottom: none; }
-
-.paper-title {
-    font-size: 1.15rem;
-    font-weight: bold;
-    color: #000;
-    margin: 0 0 4px 0;
-    line-height: 1.3;
-}
-
-.authors {
-    font-style: italic; /* RESTORED ITALICS */
-    color: #555;
-    margin: 0 0 15px 0;
-    display: block;
-}
-
-/* VERTICAL BUTTON STACK */
-.link-stack {
-    display: flex;
-    flex-direction: column; /* Forces one button per line */
-    align-items: flex-start; /* Aligns buttons left */
-    gap: 10px; /* Space between buttons */
-}
-
-.btn {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid #333; /* Dark border */
-    border-radius: 4px;
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
-    font-weight: normal;
-    background-color: transparent;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.btn-disabled {
-    color: #666;
-    font-style: italic;
-}
-
-h2 {
+.container tex h2 {
     margin-top: 0;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #333;
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
-/* RESPONSIVE (Mobile) */
-@media (max-width: 800px) {
+.container tex p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+section {
+    padding: 3% 20%;
+    text-align: center;
+}
+
+section2 {
+    padding-top: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: left;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* ADDED OCT 17 */
+.toggle {
+    display: inline; /* Ensure the button takes up full width */
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.arrow {
+    display: inline-block; /* Arrow is inline with the text inside the button */
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+p2 {
+    margin-bottom: 0%; /* Removes space between the paragraph and the button */
+    font-size: larger;
+}
+
+p22 {
+    margin-bottom: 0%; /* Removes space between the paragraph and the button */
+    font-size: x-large;
+}
+
+p3 {
+    margin-bottom: 0%; 
+    font-size: large;
+}
+
+.text {
+    display: none; /* Initially hidden */
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 4%;
+}
+
+.visible {
+    display: block; /* Revealed state */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
     .container {
         flex-direction: column;
         align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2%
     }
-    .headshot-container img {
-        margin-bottom: 30px;
+
+    .container img {
+        height: auto;
+        max-width: 80%;
+    }
+
+    .container tex {
+        width: 100%;
     }
 }
