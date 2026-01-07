@@ -1,127 +1,76 @@
-/* --- EXISTING STYLES --- */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: white;
-    color: #333;
-}
-
-header {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 5px 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
+/* Layout Containers */
 .container {
     display: flex;
-    align-items: flex-start; /* Changed from center so text stays at top */
     justify-content: center;
-    padding: 3% 15%; 
-    box-sizing: border-box;
-    width: 100%;
+    padding: 40px 15%;
+    gap: 50px; /* Space between headshot and text */
 }
 
-.container img {
+.headshot {
     max-width: 250px;
-    margin-right: 5%;
     height: auto;
     border-radius: 8px;
 }
 
-.tex {
-    flex: 1; /* Helps the text take up remaining space */
+.content-area {
+    flex: 2;
+    text-align: left;
 }
 
-/* --- NEW PAPER BOX STYLES --- */
+/* Special class for Research Page to center the text when no image exists */
+.full-width {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+/* Paper Styling */
 .paper-item {
-    margin-bottom: 30px; /* Space between different papers */
-    text-align: left;
+    margin-bottom: 40px; /* Better division between different papers */
+    display: flex;
+    flex-direction: column; /* Keeps Title -> Authors -> Buttons in a tight stack */
 }
 
 .paper-title {
     font-weight: bold;
     font-size: 1.15rem;
-    margin: 0 0 5px 0;
-    color: #222;
+    margin-bottom: 2px;
 }
 
 .authors {
-    font-style: italic;
-    color: #666;
-    margin: 0 0 10px 0;
+    font-style: italic; /* Re-enabled italics */
+    color: #555;
+    margin-bottom: 12px;
 }
 
-/* The Link Boxes */
-.btn {
+/* Button Styling (One per line) */
+.link-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keeps buttons left-aligned */
+    gap: 8px; /* Tight vertical spacing between buttons */
+}
+
+.paper-button {
     display: inline-block;
     padding: 6px 14px;
-    margin-right: 8px;
-    margin-top: 5px;
     border: 1px solid #333;
     border-radius: 4px;
     text-decoration: none;
     color: #333;
-    font-size: 0.85em;
+    font-size: 0.85rem;
     font-weight: bold;
-    transition: 0.2s;
+    transition: background 0.2s;
 }
 
-.btn:hover {
+.paper-button:hover {
     background-color: #333;
-    color: white;
+    color: #fff;
 }
 
-.btn-disabled {
-    display: inline-block;
-    padding: 6px 14px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    color: #999;
-    font-size: 0.85em;
-    border-radius: 4px;
-}
-
-/* Responsive Fix */
-@media only screen and (max-width: 800px) {
+/* Responsive fix for mobile */
+@media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: center;
-        padding: 5%;
-    }
-    .container img {
-        margin-right: 0;
-        margin-bottom: 20px;
+        padding: 20px 5%;
     }
 }
