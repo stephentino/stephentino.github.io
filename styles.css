@@ -1,76 +1,138 @@
-/* Layout Containers */
-.container {
+/* GLOBAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero h1 { margin: 0; font-size: 2.5rem; }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    padding: 40px 15%;
+}
+
+nav ul li { margin: 0 15px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+
+/* LAYOUT CONTAINER */
+/* This handles the side-by-side on Index */
+.container {
+    display: flex;
+    align-items: flex-start; /* Aligns text to top */
+    justify-content: center;
+    padding: 40px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 50px; /* Space between headshot and text */
 }
 
-.headshot {
-    max-width: 250px;
+/* Headshot Styling */
+.headshot-container img {
+    width: 250px; /* Fixed width for headshot */
     height: auto;
     border-radius: 8px;
+    display: block;
 }
 
+/* Research Text Area */
 .content-area {
-    flex: 2;
-    text-align: left;
-}
-
-/* Special class for Research Page to center the text when no image exists */
-.full-width {
+    flex: 1; /* Takes up remaining space */
     max-width: 800px;
-    margin: 0 auto;
 }
 
-/* Paper Styling */
-.paper-item {
-    margin-bottom: 40px; /* Better division between different papers */
-    display: flex;
-    flex-direction: column; /* Keeps Title -> Authors -> Buttons in a tight stack */
+/* RESEARCH PAGE SPECIFIC (No Headshot) */
+/* This centers the text when there is no sidebar */
+.no-sidebar {
+    margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 800px;
 }
+
+/* PAPER ITEM STYLING */
+.paper-item {
+    margin-bottom: 40px; /* Big space between papers */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Divider line */
+}
+
+/* Remove border from last item */
+.paper-item:last-child { border-bottom: none; }
 
 .paper-title {
-    font-weight: bold;
     font-size: 1.15rem;
-    margin-bottom: 2px;
+    font-weight: bold;
+    color: #000;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
 }
 
 .authors {
-    font-style: italic; /* Re-enabled italics */
+    font-style: italic; /* RESTORED ITALICS */
     color: #555;
-    margin-bottom: 12px;
+    margin: 0 0 15px 0;
+    display: block;
 }
 
-/* Button Styling (One per line) */
+/* VERTICAL BUTTON STACK */
 .link-stack {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Keeps buttons left-aligned */
-    gap: 8px; /* Tight vertical spacing between buttons */
+    flex-direction: column; /* Forces one button per line */
+    align-items: flex-start; /* Aligns buttons left */
+    gap: 10px; /* Space between buttons */
 }
 
-.paper-button {
+.btn {
     display: inline-block;
-    padding: 6px 14px;
-    border: 1px solid #333;
+    padding: 8px 16px;
+    border: 1px solid #333; /* Dark border */
     border-radius: 4px;
     text-decoration: none;
     color: #333;
-    font-size: 0.85rem;
-    font-weight: bold;
-    transition: background 0.2s;
+    font-size: 0.9rem;
+    font-weight: normal;
+    background-color: transparent;
+    transition: all 0.2s ease;
 }
 
-.paper-button:hover {
+.btn:hover {
     background-color: #333;
     color: #fff;
 }
 
-/* Responsive fix for mobile */
-@media screen and (max-width: 768px) {
+.btn-disabled {
+    color: #666;
+    font-style: italic;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 800px) {
     .container {
         flex-direction: column;
-        padding: 20px 5%;
+        align-items: center;
+    }
+    .headshot-container img {
+        margin-bottom: 30px;
     }
 }
