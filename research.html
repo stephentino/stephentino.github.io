@@ -3,12 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Tino</title>
+    <title>Research | Stephen Tino</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Tighten the gap between the image and text */
+        .container { gap: 35px; }
+
+        /* Clean, minimalist layout styles */
+        .paper { margin-bottom: 30px; } 
+        
+        /* === THE ANCHOR (Large) === */
+        .tex h3.paper-title { 
+            margin: 0; 
+            font-size: 1.05em; 
+            color: #111827; 
+            font-weight: 600; 
+        }
+        
+        /* === THE METADATA (Smaller, Uniform Size) === */
+        /* Authors, News, and Links all share the 0.95em size */
+        
+        .tex p.paper-authors { 
+            margin: 2px 0 0 0; 
+            color: #4b5563; 
+            font-size: 0.95em; 
+        }
+        
+        .tex p.news-link { 
+            font-size: 0.95em; 
+            margin: 0 0 6px 0; 
+            color: #4b5563; 
+        }
+        
+        /* Flexbox for perfectly aligned links and separators */
+        .paper-links { 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center;
+            gap: 12px; 
+            font-size: 0.95em; 
+            margin-top: 6px; 
+        }
+        
+        /* Links are regular weight, relying on color to stand out */
+        .paper-links a { 
+            font-weight: 400; 
+            color: #2563eb; 
+        }
+        .paper-links span:not(.sep) { 
+            color: #4b5563; 
+            font-weight: 400; 
+        } 
+
+        /* Soft Pipe Separator */
+        .sep { 
+            color: #d1d5db; 
+            font-weight: 300; 
+            user-select: none; 
+        }
+    </style>
 </head>
 <body>
     <header>
-
         <div class="hero">
             <h1>Stephen Tino</h1>
         </div>
@@ -22,64 +78,61 @@
                 <li><a href="https://github.com/stephentino" target="_blank">GitHub</a></li>
             </ul>
         </nav>
-
     </header>
 
     <div class="container">
-
-        <img src="headshot.JPG" alt="" class="img">
+        <img src="headshot.JPG" alt="Stephen Tino" class="img">
 
         <div class="tex">
             <h2>Working Papers</h2>
 
+            <div class="paper">
+                <h3 class="paper-title">"Labor Market Power, Firm Productivity, and the Immigrant-Native Pay Gap"</h3>
+                <div class="paper-links">
+                    <a href="https://stephentino.github.io/tino_jmp.pdf" target="_blank">NEW version (Jan 2026)</a>
+                    <span class="sep">|</span>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6099109" target="_blank">SSRN</a>
+                    <span class="sep">|</span>
+                    <a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/09/CLEF-088-2025.pdf" target="_blank">CLEF (Older Version)</a>
+                </div>
+            </div>
 
+            <div class="paper">
+                <h3 class="paper-title">"The Labor Market Return to Permanent Residency"</h3>
+                <p class="paper-authors">with <a href="https://www.korykroft.com/" target="_blank">Kory Kroft</a>, <a href="https://isaacnorwich.com/" target="_blank">Isaac Norwich</a>, and <a href="https://users.nber.org/~notom/" target="_blank">Matthew J. Notowidigdo</a></p>
+                <div class="paper-links">
+                    <a href="https://stephentino.github.io/KNNT_TFWs_dec2025.pdf" target="_blank">Latest version (Dec 2025)</a>
+                    <span class="sep">|</span>
+                    <a href="https://www.nber.org/papers/w34630" target="_blank">NBER</a>
+                    <span class="sep">|</span>
+                    <a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/12/CLEF-093-2025.pdf" target="_blank">CLEF</a>
+                </div>
+                <p class="news-link">📰 <strong>In the news:</strong> <a href="https://www.theglobeandmail.com/business/article-temporary-foreign-workers-switch-jobs-and-earn-more-after-becoming/" target="_blank">Globe and Mail</a></p>
+            </div>
 
-            <p>  "Labor Market Power, Firm Productivity, and the Immigrant-Native Pay Gap" <br> <a href="https://stephentino.github.io/tino_jmp.pdf" target="_blank">NEW version (Jan 2026)</a> <br> Also available at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6099109" target="_blank"> SSRN</a> and older version at <a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/09/CLEF-088-2025.pdf" target="_blank"> CLEF </a>  </p> 
+            <div class="paper">
+                <h3 class="paper-title">"Immigrant Impact on Local Labour Markets: Evidence from the Canadian International Student Expansion"</h3>
+                <p class="paper-authors">with <a href="https://economics.ubc.ca/profile/david-green/" target="_blank">David A. Green</a> and <a href="https://arts.uwaterloo.ca/~skuterud/" target="_blank">Mikal Skuterud</a></p>
+                <div class="paper-links">
+                    <span>Latest version (April 2025)</span>
+                </div>
+            </div>
 
+            <div class="paper">
+                <h3 class="paper-title">"Labor Market Concentration, Minimum Wages, and Local Property Crime Rates"</h3>
+                <div class="paper-links">
+                    <a href="https://stephentino.github.io/tino_mw.pdf" target="_blank">Latest version (Oct 2024)</a>
+                </div>
+            </div>
             
-  <p> "The Labor Market Return to Permanent Residency" <br> <i> with  <a href="https://www.korykroft.com/" target="_blank"> Kory Kroft </a>,  <a href="https://isaacnorwich.com/" target="_blank">Isaac Norwich </a>, and  <a href="https://users.nber.org/~notom/" target="_blank">Matthew J. Notowidigdo </a> </i> <br> <a href="https://stephentino.github.io/KNNT_TFWs_dec2025.pdf" target="_blank">Latest version (Dec 2025)</a> <br> Also available at <a href="https://www.nber.org/papers/w34630" target="_blank"> NBER</a> and <a href="https://clef.uwaterloo.ca/wp-content/uploads/2025/12/CLEF-093-2025.pdf" target="_blank"> CLEF</a> <br> In the news: <a href="https://www.theglobeandmail.com/business/article-temporary-foreign-workers-switch-jobs-and-earn-more-after-becoming/" target="_blank"> Globe and Mail </a> </p>  
+            <h2 style="margin-top: 35px;">Work in Progress</h2>
 
-            
-
-            
-            
-               
-            <p> "Immigrant Impact on Local Labour Markets: Evidence from the Canadian International Student Expansion" <br> <i>with  <a href="https://economics.ubc.ca/profile/david-green/" target="_blank">David A. Green </a> and  <a href="https://arts.uwaterloo.ca/~skuterud/" target="_blank">Mikal Skuterud</a> </i> <br> Latest version (April 2025) <!-- [<a href="https://stephentino.github.io/international_students_gst.pdf" target="_blank">Full text</a> </p> -->
-
-            
-          
-            <p> "Labor Market Concentration, Minimum Wages, and Local Property Crime Rates" <br> <a href="https://stephentino.github.io/tino_mw.pdf" target="_blank">Latest version (Oct 2024)</a> </p> 
-
-            
-          <p> <br> </p>
-            
-            <h2>Work in Progress </h2>
-
-            <p> "The Impact of Source Country Institutions on Immigrant Integration" <br> <i> with  <a href="https://wp.nyu.edu/abudhabi-wifagadnan/" target="_blank">Wifag Adnan</a> and  <a href="https://cevatgirayaksoy.com/" target="_blank">Cevat G. Aksoy</a> </i> <br> </p>
-         
+            <div class="paper">
+                <h3 class="paper-title">"The Impact of Source Country Institutions on Immigrant Integration"</h3>
+                <p class="paper-authors">with <a href="https://wp.nyu.edu/abudhabi-wifagadnan/" target="_blank">Wifag Adnan</a> and <a href="https://cevatgirayaksoy.com/" target="_blank">Cevat G. Aksoy</a></p>
+            </div>
             
         </div>
-        
     </div>
-    
-        <script>
-            function toggleText(textID, arrowID) {
-                var textElement = document.getElementById(textID);
-                var arrow = document.getElementById(arrowID);
-    
-                // Toggle the visibility of the text
-                if (textElement.style.display === "none" || textElement.style.display === "") {
-                    textElement.style.display = "block"; // Show the text
-                    arrow.innerHTML = "▼";  // Change arrow to point down
-                } else {
-                    textElement.style.display = "none"; // Hide the text
-                    arrow.innerHTML = "►";  // Change arrow to point right
-                }
-            }
-        </script>
-
-
-    </section>
-
 </body>
 </html>

@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Tino</title>
+    <title>Contact | Stephen Tino</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Keep spacing consistent with the rest of the site */
+        .container { gap: 35px; }
+        
+        /* Structure the contact items */
+        .contact-item { margin-bottom: 25px; }
+        
+        /* Soft labels to match the index page */
+        .label { 
+            color: #6b7280; 
+            font-weight: 500; 
+            display: block; /* Puts the label on its own line */
+            margin-bottom: 4px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Address formatting */
+        .address-block { 
+            color: #4b5563; 
+            line-height: 1.8; 
+            margin: 0;
+        }
+        
+        /* Make links standard weight, matching research.html */
+        .contact-item a { font-weight: 400; }
+    </style>
 </head>
 <body>
     <header>
-
         <div class="hero">
             <h1>Stephen Tino</h1>
         </div>
@@ -22,36 +49,35 @@
                 <li><a href="https://github.com/stephentino" target="_blank">GitHub</a></li>
             </ul>
         </nav>
-
     </header>
 
     <div class="container">
-
-        <img src="TMU-rgb.png" alt="" class="img">
+        <img src="TMU-rgb.png" alt="Toronto Metropolitan University" class="img">
 
         <div class="tex">
             <h2>Contact</h2>
     
-            <p> <b>E-mail:</b> stino@torontomu.ca </p>
+            <div class="contact-item">
+                <span class="label">E-mail</span>
+                <a href="mailto:stino@torontomu.ca">stino@torontomu.ca</a>
+            </div>
     
-            <p> <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/stephen-tino/" target="_blank">Stephen Tino</a></p>
-    
-           
+            <div class="contact-item">
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/stephen-tino/" target="_blank">Stephen Tino</a>
+            </div>
             
-            <p><br> </p>
-            
-            <p> <b>Address: </b> </p>
-
-            <p> Jorgenson Hall  </p>
-<p> 380 Victoria St.</p>
-<p> Toronto, Ontario M5B 2K3</p>
-<p> Department of Economics,</p>
-<p> Toronto Metropolitan University</p>
-      
+            <div class="contact-item">
+                <span class="label">Mailing Address</span>
+                <p class="address-block">
+                    Department of Economics<br>
+                    Toronto Metropolitan University<br>
+                    Jorgenson Hall<br>
+                    380 Victoria St.<br>
+                    Toronto, Ontario M5B 2K3
+                </p>
+            </div>
         </div>
-        
     </div>
-
-
 </body>
 </html>
