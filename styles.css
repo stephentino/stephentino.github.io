@@ -170,9 +170,7 @@ a:hover {
 /* =========================================
    Mobile Responsiveness
    ========================================= */
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
+
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
