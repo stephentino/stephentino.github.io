@@ -170,11 +170,14 @@ a:hover {
 /* =========================================
    Mobile Responsiveness
    ========================================= */
+/* =========================================
+   Mobile Responsiveness
+   ========================================= */
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        align-items: center;
-        text-align: center; /* Center text on mobile */
+        align-items: center; /* Keeps the image centered */
+        text-align: left; /* Restores clean, readable left-aligned text */
         gap: 30px;
         padding: 20px;
     }
@@ -188,7 +191,7 @@ a:hover {
     }
     
     .text {
-        text-align: center;
+        text-align: left;
         border-left: none;
         margin-left: 0;
         padding-left: 0;
