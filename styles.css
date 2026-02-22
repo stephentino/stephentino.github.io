@@ -1,183 +1,196 @@
-/* styles.css */
+/* =========================================
+   Import Google Fonts
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* =========================================
+   Base Styles & Typography
+   ========================================= */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
-    color: #333;
+    background-color: #fafafa; /* Very light gray for a softer background */
+    color: #374151; /* Softer slate gray instead of harsh black */
+    line-height: 1.6; /* Better readability for academic text */
 }
 
+/* =========================================
+   Header & Navigation
+   ========================================= */
 header {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 5px 10px;
+    background-color: #ffffff;
+    padding: 20px 10px;
     text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 3%; /* Reduced padding for better layout */
-    padding-left: 22%;
-    padding-right: 22%;
-    box-sizing: border-box;
-    width: 100%; /* Adjusted width for a wider container */
-}
-
-.container2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 3%; /* Reduced padding for better layout */
-    padding-left: 20%;
-    padding-right: 70%;
-    box-sizing: border-box;
-    width: 130%; /* Adjusted width for a wider container */
-}
-
-.container img {
-    max-width: 40%; /* Reduce the image width */
-    margin-right: 10%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.container tex {
-    max-width: 60%; /* Optional: control the maximum width of the text */
-}
-
-.container tex h2 {
-    margin-top: 0;
-}
-
-.container tex p {
-    margin: 0;
-    line-height: 1.5;
+    border-bottom: 1px solid #e5e7eb; /* Subtle dividing line */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
 .hero {
-    padding: 50px 20px;
+    padding: 20px 20px 10px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 42px;
     margin: 0;
+    color: #111827; /* Darker heading for contrast */
+    letter-spacing: -0.5px;
 }
 
-.hero p {
-    font-size: 24px;
-    margin: 10px 0;
+nav ul {
+    list-style-type: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Modern spacing instead of margins */
 }
 
-section {
-    padding: 3% 20%;
-    text-align: center;
+nav ul li a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease; /* Smooth hover transition */
 }
 
-section2 {
-    padding-top: 3%;
-    padding-left: 20%;
-    padding-right: 20%;
-    text-align: left;
+nav ul li a:hover {
+    color: #2563eb; /* Professional blue on hover */
 }
 
+/* =========================================
+   Global Link Styles
+   ========================================= */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* =========================================
+   Main Layout Container
+   ========================================= */
+.container {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top rather than center */
+    justify-content: center;
+    gap: 50px; /* Clean spacing between image and text */
+    max-width: 1000px; /* Prevents text from stretching too wide on big screens */
+    margin: 40px auto; /* Centers the container automatically */
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   Images
+   ========================================= */
+.container .img {
+    max-width: 300px; /* Fixed max width for a cleaner look */
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Professional depth shadow */
+}
+
+/* =========================================
+   Text Content
+   ========================================= */
+.container .tex {
+    flex: 1; /* Takes up the remaining space */
+    max-width: 600px;
+}
+
+.container .tex h2 {
+    margin-top: 0;
+    color: #111827;
+    border-bottom: 2px solid #e5e7eb; /* Clean underline for section headers */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.container .tex p {
+    margin-bottom: 16px; /* Space between paragraphs */
+}
+
+/* =========================================
+   Buttons & Toggles (From Original CSS)
+   ========================================= */
 .button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #333;
+    background-color: #1f2937;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
 .button:hover {
-    background-color: #555;
+    background-color: #374151;
+    text-decoration: none;
+    color: white;
 }
 
-/* ADDED OCT 17 */
 .toggle {
-    display: inline; /* Ensure the button takes up full width */
+    display: inline; 
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 5%;
+    color: #2563eb;
 }
 
 .arrow {
-    display: inline-block; /* Arrow is inline with the text inside the button */
+    display: inline-block; 
     transition: transform 0.3s ease;
     margin-right: 5px;
-    margin-bottom: 5%;
-    margin-top: 5%;
-}
-
-p2 {
-    margin-bottom: 0%; /* Removes space between the paragraph and the button */
-    font-size: larger;
-}
-
-p22 {
-    margin-bottom: 0%; /* Removes space between the paragraph and the button */
-    font-size: x-large;
-}
-
-p3 {
-    margin-bottom: 0%; 
-    font-size: large;
+    font-size: 0.9em;
 }
 
 .text {
-    display: none; /* Initially hidden */
-    text-align: center;
-    margin-left: 5%;
-    margin-bottom: 4%;
+    display: none; 
+    text-align: left; /* Better for readability than center */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #e5e7eb; /* Visual indicator for dropped-down text */
 }
 
 .visible {
-    display: block; /* Revealed state */
+    display: block; 
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
-    }
+/* =========================================
+   Mobile Responsiveness
+   ========================================= */
+@media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: center;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 2%
+        text-align: center; /* Center text on mobile */
+        gap: 30px;
+        padding: 20px;
     }
 
-    .container img {
-        height: auto;
-        max-width: 80%;
+    .container .img {
+        max-width: 250px; /* Slightly smaller image on mobile */
     }
 
-    .container tex {
+    .container .tex {
         width: 100%;
+    }
+    
+    .text {
+        text-align: center;
+        border-left: none;
+        margin-left: 0;
+        padding-left: 0;
     }
 }
