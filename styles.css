@@ -118,6 +118,22 @@ a:hover {
     margin-bottom: 16px; /* Space between paragraphs */
 }
 
+/* === JOURNAL STATUS (NEW) === */
+.tex p.journal-status {
+    margin: 4px 0 0 0;
+    font-size: 0.95em;
+    color: #374151; /* Slightly darker to make it pop */
+    font-weight: 500;
+}
+
+.journal-name {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: #9ca3af; /* A clean, subtle gray underline */
+}
+
 /* =========================================
    Buttons & Toggles (From Original CSS)
    ========================================= */
