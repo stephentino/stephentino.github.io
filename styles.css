@@ -120,6 +120,7 @@ a:hover {
 
 /* === JOURNAL STATUS (NEW) === */
 .tex p.journal-status {
+    font-style: italic;
     margin: 4px 0 0 0;
     font-size: 0.95em;
     color: #374151; /* Slightly darker to make it pop */
